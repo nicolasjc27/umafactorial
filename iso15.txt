@@ -1,0 +1,44 @@
+$ git init practica
+$ cd practica
+$ git config user.name "nicolasjc27"
+$ git config user.email "nicjilcan@uma.es"
+$ git clone https://github.com/nicolasjc27/umafactorial
+$ cd umafactorial
+$ touch factorial.java
+$ git add factorial.java
+$ git commit -m "implementacion inicial"
+$ git add factorial.java
+$ git commit -m "refactorizacion"
+$ git remote add remoto https://github.com/nicolasjc27/umafactorial
+$ git push remoto master
+$ git checkout -b recursivo
+$ git add factorial.java
+$ git commit -m "implementacion recursiva"
+$ git push remoto recursivo
+$ git checkout master
+$ git add factorial.java
+$ git commit -m "correccion numeros negativos"
+$ git push remoto master
+$ git checkout recursivo
+$ git add factorial.java
+$ git commit -m "optimizacion"
+$ git push remoto master
+$ git merge recursivo
+$ git checkout -b refacIO
+$ git add factorial.java
+$ git commit -m "refactorizacion de metodo de entrada"
+$ git stash
+$ git checkout master
+$ git add factorial.java
+$ git commit -m "cambio de long a BigInteger"
+$ git push remoto master
+$ git checkout refacIO
+$ git stash pop
+$ git commit -m "refactorizacion de metodo de salida"
+$ git checkout master
+$ git merge refacIO
+$ git add factorial.java
+$ git commit -m "mezcla de rama refacIO"
+$ git push remoto master
+
+
